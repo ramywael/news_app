@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:news_app_ui_setup/widgets/category_card.dart';
 
 class NewView extends StatelessWidget {
   const NewView({super.key});
@@ -20,7 +21,7 @@ class NewView extends StatelessWidget {
                 color: Colors.black,
               ),
             ),
-              Text(
+            Text(
               'Cloud',
               style: TextStyle(
                 color: Colors.orange,
@@ -29,6 +30,7 @@ class NewView extends StatelessWidget {
           ],
         ),
       ),
+      body: const CategoryCard()
     );
   }
 }
