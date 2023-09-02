@@ -8,38 +8,45 @@ class NewView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.transparent,
-        centerTitle: true,
-        elevation: 0,
-        title: const Row(
-          mainAxisSize: MainAxisSize.min,
-          //told the row to take as little space as possible(Child)
-          children: [
-            Text(
-              'News',
-              style: TextStyle(
-                color: Colors.black,
+        appBar: AppBar(
+          backgroundColor: Colors.transparent,
+          centerTitle: true,
+          elevation: 0,
+          title: const Row(
+            mainAxisSize: MainAxisSize.min,
+            //told the row to take as little space as possible(Child)
+            children: [
+              Text(
+                'News',
+                style: TextStyle(
+                  color: Colors.black,
+                ),
               ),
-            ),
-            Text(
-              'Cloud',
-              style: TextStyle(
-                color: Colors.orange,
+              Text(
+                'Cloud',
+                style: TextStyle(
+                  color: Colors.orange,
+                ),
               ),
-            ),
-          ],
+            ],
+          ),
         ),
-      ),
-      body: const CustomScrollView(
-        physics: BouncingScrollPhysics(),
-        slivers: [
-          SliverToBoxAdapter( child: CategoryListView(),),
-         SliverToBoxAdapter(child: SizedBox(height: 20,),),
-          SliverToBoxAdapter(child: NewsItemListView(),),
-        ],
-      )
-    );
+        body: const CustomScrollView(
+          physics:  BouncingScrollPhysics(),
+          slivers: [
+             SliverToBoxAdapter(
+              child: CategoryListView(),
+            ),
+             SliverToBoxAdapter(
+              child: SizedBox(
+                height: 20,
+              ),
+            ),
+            // const SliverToBoxAdapter(
+            //   child: NewsItemListView(),
+            // ),
+            NewsItemListView(),
+          ],
+        ));
   }
 }
-
