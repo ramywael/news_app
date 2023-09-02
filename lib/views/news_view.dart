@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../widgets/category_list_view.dart';
+import '../widgets/news_item_list_view.dart';
 
 class NewView extends StatelessWidget {
   const NewView({super.key});
@@ -30,7 +30,7 @@ class NewView extends StatelessWidget {
           ],
         ),
       ),
-      body: const  CategoryListView(),
+      body: const NewsItemListView(),
     );
   }
 }

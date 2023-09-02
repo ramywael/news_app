@@ -12,7 +12,7 @@ class NewsTile extends StatelessWidget {
           borderRadius: BorderRadius.only(
               bottomRight: Radius.circular(6), bottomLeft: Radius.circular(6))),
       child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
+        //crossAxisAlignment: CrossAxisAlignment.start,
         mainAxisSize: MainAxisSize.min,
         children: <Widget>[
           ClipRRect(
