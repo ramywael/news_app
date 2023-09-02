@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:news_app_ui_setup/widgets/category_list_view.dart';
 import '../widgets/news_item_list_view.dart';
 
 class NewView extends StatelessWidget {
@@ -30,7 +31,13 @@ class NewView extends StatelessWidget {
           ],
         ),
       ),
-      body: const NewsItemListView(),
+      body: const Column(
+        children: [
+          CategoryListView(),
+          SizedBox(height: 20,),
+          Expanded(child: NewsItemListView()),
+        ],
+      )
     );
   }
 }
