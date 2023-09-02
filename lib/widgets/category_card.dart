@@ -10,7 +10,7 @@ class CategoryCard extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.all(8.0),
       child: Container(
-        height: 85,
+        height: 95,
         width: 160,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(12),

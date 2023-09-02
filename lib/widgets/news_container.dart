@@ -40,7 +40,7 @@ class NewsTile extends StatelessWidget {
             height: 4,
           ),
           const Text(
-            'and here is the desciption of the news you can place your desc here',
+            'and here is the description of the news you can place your desc here',
             maxLines: 2,
             style: TextStyle(color: Colors.black54, fontSize: 14),
           )

@@ -10,7 +10,8 @@ class NewsItemListView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
-      physics: const BouncingScrollPhysics(),
+      shrinkWrap: true,
+      physics: const NeverScrollableScrollPhysics(),
       itemCount: 10,
       itemBuilder: (BuildContext context, int index) {
         return const Padding(

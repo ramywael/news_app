@@ -31,11 +31,12 @@ class NewView extends StatelessWidget {
           ],
         ),
       ),
-      body: const Column(
-        children: [
-          CategoryListView(),
-          SizedBox(height: 20,),
-          Expanded(child: NewsItemListView()),
+      body: const CustomScrollView(
+        physics: BouncingScrollPhysics(),
+        slivers: [
+          SliverToBoxAdapter( child: CategoryListView(),),
+         SliverToBoxAdapter(child: SizedBox(height: 20,),),
+          SliverToBoxAdapter(child: NewsItemListView(),),
         ],
       )
     );
