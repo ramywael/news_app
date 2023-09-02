@@ -5,19 +5,22 @@ class CategoryCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      height: 85,
-      width: 160,
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(12),
-        image: const DecorationImage(
-            image: AssetImage('assets/technology.jpeg'), fit: BoxFit.fill),
-      ),
-      child: const Center(
-        child: Text(
-          'Bussiness',
-          style: TextStyle(
-              color: Colors.white, fontSize: 16, fontWeight: FontWeight.bold),
+    return Padding(
+      padding: const EdgeInsets.all(8.0),
+      child: Container(
+        height: 85,
+        width: 160,
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(12),
+          image: const DecorationImage(
+              image: AssetImage('assets/technology.jpeg'), fit: BoxFit.fill),
+        ),
+        child: const Center(
+          child: Text(
+            'Bussiness',
+            style: TextStyle(
+                color: Colors.white, fontSize: 16, fontWeight: FontWeight.bold),
+          ),
         ),
       ),
     );
