@@ -1,6 +1,7 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 
-class NewsTile extends StatelessWidget {
+class NewsTile extends StatelessWidget { 
   const NewsTile({super.key});
 
   @override
@@ -16,13 +17,25 @@ class NewsTile extends StatelessWidget {
         mainAxisSize: MainAxisSize.min,
         children: <Widget>[
           ClipRRect(
-              borderRadius: BorderRadius.circular(6),
-              child: Image.network(
-                'https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80',
-                height: 200,
-                width: MediaQuery.of(context).size.width,
-                fit: BoxFit.cover,
-              )),
+            borderRadius: BorderRadius.circular(6),
+            // child: Image.network(
+            //   'https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80',
+            //   height: 200,
+            //   width: MediaQuery.of(context).size.width,
+            //   fit: BoxFit.cover,
+            // ),
+           child: CachedNetworkImage(
+              imageUrl:
+                  'https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80',
+              height: 200,
+              width: MediaQuery.of(context).size.width,
+              fit: BoxFit.cover,
+              errorWidget: (context, url, error) => const Icon(Icons.error,color: Colors.red,),
+              placeholder: (context, url) => const Center(
+                child: CircularProgressIndicator(),
+              ),
+            )
+          ),
           const SizedBox(
             height: 12,
           ),
