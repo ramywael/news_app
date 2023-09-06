@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:news_app_ui_setup/widgets/category_view.dart';
+import 'package:news_app_ui_setup/views/category_view.dart';
 
 import '../models/category_model.dart';
 
@@ -13,7 +13,7 @@ class CategoryCard extends StatelessWidget {
       child: GestureDetector(
         onTap: () {
           Navigator.push(context, MaterialPageRoute(builder: (context) {
-            return const CategoryView();
+            return  CategoryView(category: category.categoryName,);
             },)
           );
         },

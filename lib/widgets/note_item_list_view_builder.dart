@@ -1,13 +1,13 @@
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
-
 import '../models/article_model.dart';
 import '../services/get_news_api.dart';
 import 'news_item_list_view.dart';
 
 class NoteItemListViewBuilder extends StatefulWidget {
+  final String category;
   const NoteItemListViewBuilder({
-    super.key,
+    super.key, required this.category,
   });
 
   @override
@@ -20,7 +20,7 @@ class _NoteItemListViewBuilderState extends State<NoteItemListViewBuilder> {
   void initState()  {
     // TODO: implement initState
     super.initState();
-    future= Service(Dio()).getNews();
+    future= Service(Dio()).getNews(category: widget.category);
   }
 
   // Future<void> getGeneralNews() async {

@@ -31,8 +31,8 @@ class NewView extends StatelessWidget {
             ],
           ),
         ),
-        body: const CustomScrollView(
-          physics:  BouncingScrollPhysics(),
+        body: const  CustomScrollView(
+          physics:   BouncingScrollPhysics(),
           slivers: [
              SliverToBoxAdapter(
               child: CategoryListView(),
@@ -45,7 +45,7 @@ class NewView extends StatelessWidget {
             // const SliverToBoxAdapter(
             //   child: NewsItemListView(),
             // ),
-            NoteItemListViewBuilder(),
+            NoteItemListViewBuilder(category: 'general'),
           ],
         ));
   }
