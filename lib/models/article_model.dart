@@ -1,6 +1,6 @@
 class ArticalModel {
   final String title;
-  final String description;
+  final String? description;
   final String? urlToImage;
 
   ArticalModel(
