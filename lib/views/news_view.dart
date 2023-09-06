@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:news_app_ui_setup/widgets/category_list_view.dart';
+import '../components/custom_text_app_bar.dart';
 import '../widgets/note_item_list_view_builder.dart';
 
 class NewView extends StatelessWidget {
@@ -12,24 +13,7 @@ class NewView extends StatelessWidget {
           backgroundColor: Colors.transparent,
           centerTitle: true,
           elevation: 0,
-          title: const Row(
-            mainAxisSize: MainAxisSize.min,
-            //told the row to take as little space as possible(Child)
-            children: [
-              Text(
-                'News',
-                style: TextStyle(
-                  color: Colors.black,
-                ),
-              ),
-              Text(
-                'Cloud',
-                style: TextStyle(
-                  color: Colors.orange,
-                ),
-              ),
-            ],
-          ),
+          title: const CutomTextAppBar(),
         ),
         body: const  CustomScrollView(
           physics:   BouncingScrollPhysics(),

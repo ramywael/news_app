@@ -6,8 +6,8 @@ class Service {
   Service(this.dio);
   Future<List<ArticalModel>> getNews({required String category}) async {
     String apiKey = "f58bcc77c5da446987d2e504f85e86f2";
-    Response response = await dio
-        .get("https://newsapi.org/v2/top-headlines?country=us&apiKey=$apiKey&category=$category");
+    Response response = await dio.get(
+        "https://newsapi.org/v2/top-headlines?country=us&apiKey=$apiKey&category=$category");
     //in the dio package we donot have to convert the response to json
     //dio does it for us
     Map<String, dynamic> data = response.data; //data is a map
@@ -21,7 +21,8 @@ class Service {
       ArticalModel articalModel = ArticalModel(
           title: article["title"],
           description: article['description'],
-          urlToImage: article['urlToImage']);
+          urlToImage: article['urlToImage'],
+          url: article['url']);
       articleList.add(articalModel); //adding the article to the list
     }
     return articleList;

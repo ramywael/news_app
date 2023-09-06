@@ -20,7 +20,7 @@ class _NoteItemListViewBuilderState extends State<NoteItemListViewBuilder> {
   void initState()  {
     // TODO: implement initState
     super.initState();
-    future= Service(Dio()).getNews(category: widget.category);
+    future= Service(Dio()).getNews(category: widget.category,);
   }
 
   // Future<void> getGeneralNews() async {
